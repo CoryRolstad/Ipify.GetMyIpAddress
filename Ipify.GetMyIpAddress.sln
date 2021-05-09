@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31205.134
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ipify.GetMyIpAddress", "Ipify.GetMyIpAddress\Ipify.GetMyIpAddress.csproj", "{F49B9C67-DCA1-494F-9444-09A28F94F434}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ipify.GetMyIpAddress.Tests", "Ipify.GetMyIpAddress.Tests\Ipify.GetMyIpAddress.Tests.csproj", "{A6B773EF-1BB6-4D08-A7A5-DC00A5C32B5B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F49B9C67-DCA1-494F-9444-09A28F94F434}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F49B9C67-DCA1-494F-9444-09A28F94F434}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F49B9C67-DCA1-494F-9444-09A28F94F434}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F49B9C67-DCA1-494F-9444-09A28F94F434}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A6B773EF-1BB6-4D08-A7A5-DC00A5C32B5B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A6B773EF-1BB6-4D08-A7A5-DC00A5C32B5B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A6B773EF-1BB6-4D08-A7A5-DC00A5C32B5B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A6B773EF-1BB6-4D08-A7A5-DC00A5C32B5B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {403FFA96-CE8C-416A-9014-CA20441E4FC5}
+	EndGlobalSection
+EndGlobal
