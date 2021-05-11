@@ -4,7 +4,7 @@ using System.Threading.Tasks;
 
 namespace Ipify.GetMyIpAddress
 {
-    interface IIpService
+    public interface IIpService
     {
         /// <summary>
         /// GetExternalIpv4 Gets your external ipv4 address from ipify
