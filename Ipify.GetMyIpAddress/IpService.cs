@@ -18,6 +18,8 @@ namespace Ipify.GetMyIpAddress
             _logger = logger ?? throw new ArgumentNullException($"{nameof(logger)} cannot be null");
             if (ipServiceSettings == null)
                 _ipServiceSettings = new IpServiceSettings();
+            else
+                _ipServiceSettings = ipServiceSettings;
         }
 
         public async Task<string> GetExternalIpv4()
@@ -47,7 +49,8 @@ namespace Ipify.GetMyIpAddress
                     using (StreamReader streamReader = new StreamReader(responseStream))
                     {
                         _logger.LogInformation($"\t{DateTime.Now.ToString("MM/dd/yyyy hh:mm:ss.fff")}:\t\t\tRequest completed Successfully");
-                        return await streamReader.ReadToEndAsync();
+                        string resultString = await streamReader.ReadToEndAsync();
+                        return resultString;
                     }
                 }
             }

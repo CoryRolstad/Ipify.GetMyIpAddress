@@ -6,7 +6,7 @@ namespace Ipify.GetMyIpAddress
     {
         public int TimeOutInSeconds { get; set; } = 10; 
 
-        public string IpV4Uri { get; set; } = "api.ipify.org";
-        public string Ipv6Uri { get; set; } = "api64.ipify.org";
+        public string IpV4Uri { get; set; } = "https://api.ipify.org";
+        public string Ipv6Uri { get; set; } = "https://api64.ipify.org";
     }
 }
