@@ -9,8 +9,8 @@
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <RepositoryUrl>https://github.com/CoryRolstad/Ipify.GetMyIpAddress.git</RepositoryUrl>
     <RepositoryType>Github</RepositoryType>
-    <PackageReleaseNotes>Added Readme to Popup on install.</PackageReleaseNotes>
-    <Version>1.0.1</Version>
+    <PackageReleaseNotes>have to make an interface public really?</PackageReleaseNotes>
+    <Version>1.0.2</Version>
   </PropertyGroup>
 
   <ItemGroup>
