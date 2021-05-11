@@ -7,6 +7,9 @@
     <Company />
     <Description>Small Nuget to Get your External IP Address from Ipify Webservices</Description>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <RepositoryUrl>https://github.com/CoryRolstad/Ipify.GetMyIpAddress.git</RepositoryUrl>
+    <RepositoryType>Github</RepositoryType>
+    <PackageReleaseNotes>Initial Release</PackageReleaseNotes>
   </PropertyGroup>
 
   <ItemGroup>
