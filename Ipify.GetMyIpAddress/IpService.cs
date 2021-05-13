@@ -1,6 +1,7 @@
 ﻿using Microsoft.Extensions.Logging;
 using System;
 using System.IO;
+using System.Net;
 using System.Net.Http;
 using System.Threading.Tasks;
 
@@ -22,18 +23,28 @@ namespace Ipify.GetMyIpAddress
                 _ipServiceSettings = ipServiceSettings;
         }
 
-        public async Task<string> GetExternalIpv4()
+        public async Task<IPAddress> GetExternalIpv4()
         {
             _logger.LogInformation($"\t{DateTime.Now.ToString("MM/dd/yyyy hh:mm:ss.fff")}:\t\tGetExternalIpv4 Requested");
             HttpRequestMessage request = new HttpRequestMessage(HttpMethod.Get, new Uri(_ipServiceSettings.IpV4Uri));
-            return await MakeHttpRequest(request); 
+            string ipAddress = await MakeHttpRequest(request);
+            return ParseIPAddressString(ipAddress);
         }
 
-        public async Task<string> GetExternalIpv6()
+        public async Task<IPAddress> GetExternalIpv6()
         {
             _logger.LogInformation($"\t{DateTime.Now.ToString("MM/dd/yyyy hh:mm:ss.fff")}:\t\tGetExternalIpv6 Requested");
             HttpRequestMessage request = new HttpRequestMessage(HttpMethod.Get, new Uri(_ipServiceSettings.Ipv6Uri));
-            return await MakeHttpRequest(request);
+            string ipAddress = await MakeHttpRequest(request);
+            return ParseIPAddressString(ipAddress); 
+        }
+
+        private IPAddress ParseIPAddressString(string ip)
+        {
+            if (string.IsNullOrWhiteSpace(ip))
+                throw new ArgumentException($"{nameof(ip)} cannot be Null or whitespace");
+            ip = ip.Trim();             
+            return IPAddress.Parse(ip);           
         }
 
         private async Task<string> MakeHttpRequest(HttpRequestMessage request)

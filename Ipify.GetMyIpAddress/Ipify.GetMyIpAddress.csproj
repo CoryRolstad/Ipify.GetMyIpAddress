@@ -9,8 +9,8 @@
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <RepositoryUrl>https://github.com/CoryRolstad/Ipify.GetMyIpAddress.git</RepositoryUrl>
     <RepositoryType>Github</RepositoryType>
-    <PackageReleaseNotes>have to make an interface public really?</PackageReleaseNotes>
-    <Version>1.0.2</Version>
+    <PackageReleaseNotes>Returned IPAddress rather then a string</PackageReleaseNotes>
+    <Version>1.1.1</Version>
   </PropertyGroup>
 
   <ItemGroup>

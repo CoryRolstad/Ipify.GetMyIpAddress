@@ -103,10 +103,10 @@ namespace Ipify.GetMyIpAddress.Tests
 
             // Act
             IpService ipService = new IpService(_httpClientFactoryMock.Object, _loggerMock.Object, new IpServiceSettings());
-            string actual = await ipService.GetExternalIpv4(); 
+            IPAddress actual = await ipService.GetExternalIpv4(); 
 
             //Assert    
-            actual.Should().Be(_expectedIpTextReturnString);
+            actual.ToString().Should().Be(_expectedIpTextReturnString);
         }
 
 
@@ -170,10 +170,10 @@ namespace Ipify.GetMyIpAddress.Tests
 
             // Act
             IpService ipService = new IpService(_httpClientFactoryMock.Object, _loggerMock.Object, new IpServiceSettings());
-            string actual = await ipService.GetExternalIpv6();
+            IPAddress actual = await ipService.GetExternalIpv6();
 
             //Assert    
-            actual.Should().Be(_expectedIpTextReturnString);
+            actual.ToString().Should().Be(_expectedIpTextReturnString);
         }
 
 
